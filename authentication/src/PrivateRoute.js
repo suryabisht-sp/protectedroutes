@@ -1,10 +1,23 @@
- import React from 'react';
-     import { Navigate, Outlet } from 'react-router-dom';
+import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import auth from '../src/utils/auth';
+import NotFoundPage from './NotFoundPage';
+import { getToken } from './utils/request';
      
-     import auth from '../../utils/auth';
+const PrivateRoute = ({children}) => {
+    const data = getToken()
+//     console.log(data,"sdata")
+    if (data) {
+        Navigate("/");
+         }
+    
+     return (
+       children
+     )
+}
+     // auth.getToken() ? <Outlet /> : <Navigate to="/auth/login" />;
+         //   return auth.getToken() ? <Outlet /> : <NotFoundPage/>;
+    
      
-     const PrivateRoute = () => {
-        return auth.getToken() ? <Outlet /> : <Navigate to="/auth/login" />;
-    }
+export default PrivateRoute;
      
-     export default PrivateRoute;

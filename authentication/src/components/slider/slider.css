@@ -1,0 +1,41 @@
+.slider{
+  height: calc(100vh - 80px);
+  width: 100%;
+  /* position: relative; */
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+}
+ 
+.container{
+   height: 100vh;
+}
+
+    img{
+      width: 100vw;
+      height: 80%;
+      object-fit: cover;
+      padding: 10px;
+    }
+  
+
+  .icons{
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    gap: 10px;
+    margin: auto;}
+
+    .icon{
+      width: 50px;
+      height: 50px;
+      border: 1px solid #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 5px;
+    }
