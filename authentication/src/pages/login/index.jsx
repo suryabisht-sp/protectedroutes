@@ -16,11 +16,16 @@ const Login = () => {
     data.append("password", props.password)
       
     const fetchData = () => {
-    return axios.post("http://localhost:1337/api/auth/local",data)
-          .then((response) => setToken(response.data.jwt));
+      return axios.post("http://localhost:1337/api/auth/local", data)
+        .then((response) => { localStorage.setItem("user", JSON.stringify(response.data)); setToken(response.data.jwt) });
   }
     fetchData(); 
     // HeaderAuth()
+    setTimeout(() => {
+      navigate("/");   
+      
+    }, 2000);
+
   }
   const data = getToken()
 

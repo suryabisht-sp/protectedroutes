@@ -1,12 +1,21 @@
 import React from 'react'
 import { getToken } from '../../utils/request';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./navbar.css"
 const Navbar = () => {
+  const data = getToken()
+  const navigate = useNavigate();
+ 
+  const localData= JSON.parse(localStorage.getItem("user"))
+ 
 
-    const data= getToken()
-    const handleLogout = () => {
-        localStorage.clear("authToken");
+
+  const handleLogout = () => {
+    localStorage.clear("authToken");
+    setTimeout(() => {
+      navigate('/login')
+    }, 1500);
+    
 }
 
   return (
@@ -50,7 +59,7 @@ const Navbar = () => {
              </div>
                {data &&  
           <div>    
-          <span>Hello Admin</span>
+            <span>Hello {localData.user.username }</span>
                   <button className='btn' onClick={() => { handleLogout() }}>Logout</button>
                   </div>
           }
