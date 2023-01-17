@@ -1,17 +1,14 @@
 import React from 'react'
-import { getToken } from '../../utils/request';
+import { getToken, userInfo } from '../../utils/request';
 import { Link, useNavigate } from 'react-router-dom';
 import "./navbar.css"
 const Navbar = () => {
   const data = getToken()
   const navigate = useNavigate();
+   const localData = userInfo();
  
-  const localData= JSON.parse(localStorage.getItem("user"))
- 
-
-
   const handleLogout = () => {
-    localStorage.clear("authToken");
+    localStorage.clear();
     setTimeout(() => {
       navigate('/login')
     }, 1500);

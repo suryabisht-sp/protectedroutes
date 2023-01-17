@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "register_forms",
+  "info": {
+    "singularName": "register-form",
+    "pluralName": "register-forms",
+    "displayName": "RegisterForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email_label": {
+      "type": "email"
+    },
+    "password_label": {
+      "type": "password"
+    }
+  }
+}

@@ -6,29 +6,34 @@ import RegisterUser from '../register';
 import Layout from '../../components/layout';
 
 const router = createBrowserRouter([
-  {
-      path: "/",
-        element:  <Layout />,
-    children:[{
-        path: "/",
-      element: <Homepage />
+  // {
+  //     path: "/",
+  //       element:  <Layout />,
+  //   children:[{
+  //       path: "/",
+  //     element: <Homepage />
         
-    },
-      {
-        path: "/",
-        element: <Homepage />
-    },
-    ]
+  //   },
+  //   //   {
+  //   //     path: "/",
+  //   //     element: <Homepage />
+  //   // },
+  //   ]
       
-    }   ,
+  //   }   ,
     {
       path: "/login",
-      element: <Login/>
+      element:   <Login/>
       
     },
     {
       path: "/register",
       element: <RegisterUser/>
+      
+  },
+    {
+      path: "/",
+      element: <Homepage/>
       
      },
    

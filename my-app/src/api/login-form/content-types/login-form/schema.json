@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "login_forms",
+  "info": {
+    "singularName": "login-form",
+    "pluralName": "login-forms",
+    "displayName": "LoginForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email_label": {
+      "type": "email"
+    },
+    "password_label": {
+      "type": "password"
+    }
+  }
+}

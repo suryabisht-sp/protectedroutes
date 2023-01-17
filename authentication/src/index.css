@@ -13,6 +13,102 @@ code {
 }
 
 
-.body{
+.body {
   overflow-x: none;
+}
+
+
+.homepage h1 {
+  text-align: center;
+  margin: 10%;
+}
+
+.admin-hello {
+  text-align: center;
+  margin: 10px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-profile {
+  border-radius: 5px;
+  background: transparent;
+  margin: 10px;
+  border: 1px solid rgb(233, 233, 244);
+  position: absolute;
+  left: 87%
+}
+
+.btn-profile:hover {
+  background: green;
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+
+}
+
+.login-div {
+  margin-top: 15px;
+  width: 350px;
+  height: 380px;
+  margin-Left: auto;
+  margin-Right: auto;
+  border: 1px solid grey;
+  border-Radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 0px 15px 5px rgb(212, 212, 242);
+}
+
+
+.login-div h2{
+  text-align: center;
+}
+
+.login-handler {
+  padding: 15px;
+  margin-Top: 10px;
+  margin-Left: auto;
+  margin-Right: auto;
+  align-Content: center
+}
+
+.placehold{
+  padding: 10px;
+}
+
+.placehold input{
+ max-width: 100%; 
+ margin: 2px 15px;
+}
+
+.sub-handle{
+  border: 2px solid rgb(231, 231, 240);
+  background: rgb(233, 233, 244);
+  margin: auto 15px;
+  border-radius: 5px;
+}
+
+
+.sub-handle:hover{
+  background: green;
+  color: #fff;
+  border-radius: 5px;
+   border: 2px solid  green;
+  
+}
+
+
+
+.link-handle{
+  padding: 5px;
+  margin: auto 25px;
+}
+.link-handle:hover{
+color: blue;
+padding: 5px;
+margin: auto 25px;
 }

@@ -13,3 +13,7 @@
     export const removeToken = () => {
       localStorage.removeItem(AUTH_TOKEN);
     };
+
+export const userInfo = () => {
+    return JSON.parse(localStorage.getItem("user"))
+    }

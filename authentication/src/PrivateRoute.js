@@ -7,17 +7,16 @@ import { getToken } from './utils/request';
 const PrivateRoute = ({children}) => {
     const data = getToken()
 //     console.log(data,"sdata")
-    if (data) {
-        Navigate("/");
-         }
-    
+    if (!data) {
+      return (<Navigate to = '/home'/>)
+    }
+    else {
+    (<Navigate to = '/'/>)
+    }
      return (
        children
      )
 }
-     // auth.getToken() ? <Outlet /> : <Navigate to="/auth/login" />;
-         //   return auth.getToken() ? <Outlet /> : <NotFoundPage/>;
-    
      
 export default PrivateRoute;
      
