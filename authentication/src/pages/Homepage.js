@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from './components/Navbar/Index'
-import Footer from './components/footer'
-import { getToken, userInfo } from './utils/request'
-import Slider from './components/slider'
+import Navbar from '../components/Navbar/Index'
+import Footer from '../components/footer'
+import { getToken, userInfo } from '../utils/request'
+import Slider from '../components/slider'
 import { Link } from 'react-router-dom'
 
 const Homepage = () => {

@@ -7,7 +7,7 @@ const LoginRedirect = (props) => {
   const [text, setText] = useState('Loading...');
   const location = useLocation();
   const params = useParams();
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Successfully logged with the provider
@@ -23,16 +23,17 @@ const LoginRedirect = (props) => {
       .then(res => {
         // Successfully logged with Strapi
         // Now saving the jwt to use it for future authenticated requests to Strapi
-        localStorage.setItem('jwt', res.jwt);
-        localStorage.setItem('username', res.user.username);
+        localStorage.setItem('jwt', JSON.stringify(res.jwt));
+        // localStorage.setItem('username', res.user.username);
+          localStorage.setItem('user', JSON.stringify(res));
         setText('You have been successfully logged in. You will be redirected in a few seconds...');
-        setTimeout(() => history.push('/'), 3000); // Redirect to homepage after 3 sec
+        setTimeout(() => navigate('/home'), 3000); // Redirect to homepage after 3 sec
       })
       .catch(err => {
         console.log(err);
         setText('An error occurred, please see the developer console.')
       });
-  }, [history, location.search, params.providerName]);
+  }, [navigate, location.search, params.providerName]);
 
   return <p>{text}</p>
 };

@@ -63,6 +63,25 @@ code {
   box-shadow: 0px 0px 15px 5px rgb(212, 212, 242);
 }
 
+.gitlogo{
+  display: flex;
+  align-items: center;
+  gap: 15%;
+  width: 150px;
+}
+
+.spanLogo{
+  width: 1500px;
+  font-size:small
+}
+
+/* .gitlogo img{
+   width: 50px;
+   height:50px;
+   align-items: center;
+   margin-right: 40%;
+
+} */
 
 .login-div h2{
   text-align: center;
@@ -71,6 +90,10 @@ code {
 .login-handler {
   padding: 15px;
   margin-Top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-Left: auto;
   margin-Right: auto;
   align-Content: center
