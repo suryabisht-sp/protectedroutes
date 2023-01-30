@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forgetpasswords",
+  "info": {
+    "singularName": "forgetpassword",
+    "pluralName": "forgetpasswords",
+    "displayName": "forgetpassword"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Email": {
+      "type": "email"
+    }
+  }
+}

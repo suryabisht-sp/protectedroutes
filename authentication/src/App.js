@@ -11,6 +11,7 @@ import { getToken } from './utils/request';
 import Profile from './pages/profile/profile';
 import ConnectPage from "./pages/connectPage";
 import ForgetPass from "./pages/forgetPassword";
+import ResetPassword from "./pages/resetPassword";
 
 // function App() {
 //   return (
@@ -40,7 +41,8 @@ function App() {
       <Route path='*' element={<NotFoundPage />}></Route>
        <Route path='/login' element={<Login />}></Route>
        <Route path='/forgetpassword' element={<ForgetPass />}></Route>
-         <Route path='/register' element={<RegisterUser />}></Route>
+      <Route path='/register' element={<RegisterUser />}></Route>
+        <Route path='/reset-password' element={<ResetPassword />}></Route>
           <Route exact path="/connect/:providerName/redirect" element={<ConnectPage />}/>
     </Routes>
   );

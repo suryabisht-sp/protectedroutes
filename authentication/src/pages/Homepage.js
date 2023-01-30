@@ -8,6 +8,9 @@ import { Link } from 'react-router-dom'
 const Homepage = () => {
   const token = getToken()
   const info = userInfo()
+
+//  window.location.reload();
+
   return (
     
     <div>

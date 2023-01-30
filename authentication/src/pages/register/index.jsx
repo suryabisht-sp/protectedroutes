@@ -17,14 +17,18 @@ const RegisterUser = () => {
     data.append("password", props.password)
     data.append("username", props.username)
 
-    const fetchData = () => {
-      return axios.post("http://localhost:1337/api/auth/local/register", data)
-        .then((response) => { localStorage.setItem("user", JSON.stringify(response.data)); setToken(response.data.jwt) });
+    const fetchData = async () => {
+      return await axios.post("http://localhost:1337/api/auth/local/register", data)
+        // .then((response) => {return console.log("error", response)  })
+        .then((response) => { console.log("error", response);  localStorage.setItem("user", JSON.stringify(response.data)); setToken(response.data.jwt) });
     }
-    fetchData();
+    //  fetchData();
     // HeaderAuth()
+    console.log("fetch data", fetchData())
     setTimeout(() => {
-      navigate("/home");
+      // console.log("first regitrd")
+      // window.location.reload();
+      // navigate("/home");
     }, 2000);
   }
 

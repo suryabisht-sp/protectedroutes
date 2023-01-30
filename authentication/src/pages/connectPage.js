@@ -25,9 +25,9 @@ const LoginRedirect = (props) => {
         // Now saving the jwt to use it for future authenticated requests to Strapi
         localStorage.setItem('jwt', JSON.stringify(res.jwt));
         // localStorage.setItem('username', res.user.username);
-          localStorage.setItem('user', JSON.stringify(res));
+        localStorage.setItem('user', JSON.stringify(res));
         setText('You have been successfully logged in. You will be redirected in a few seconds...');
-        setTimeout(() => navigate('/home'), 3000); // Redirect to homepage after 3 sec
+        setTimeout(() => { navigate('/'); window.location.reload(); }, 3000); // Redirect to homepage after 3 sec
       })
       .catch(err => {
         console.log(err);

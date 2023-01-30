@@ -4,7 +4,7 @@ import axios from 'axios'
 import { getToken, setToken } from '../../utils/request';
 import HeaderAuth from "../../utils/headerAuth"
 import github from '../../assests/icons8-github.svg'
-
+import google from '../../assests/icons8-google.svg'
 
 const backendUrl = "http://localhost:1337";
 
@@ -12,7 +12,7 @@ const providersNames = [
   // 'discord',
   // 'facebook',
   'github',
-  // 'google',
+  'google',
   // 'instagram',
   // 'linkedin',
   // 'reddit',
@@ -41,6 +41,7 @@ const Login = () => {
     fetchData();
     // HeaderAuth()
     setTimeout(() => {
+       window.location.reload();
       navigate("/home");
     }, 2000);
 
@@ -66,23 +67,30 @@ const Login = () => {
       <div className='login-div'>
         <h2>Login</h2>
         <div className='login-handler'>
-          <div className='placehold'>
+          <div className='placehold1'>
             {providersNames.map((providerName, i) =>
-              <a key={i} href={`${backendUrl}/api/connect/${providerName}`}><div className='gitlogo'><span className='spanLogo'>Login via</span><img className='' src={github} alt="github" /></div></a>
+              <a key={i} href={`${backendUrl}/api/connect/${providerName}`}>
+                <div className='gitlogo'>
+                  <img className='spanLogo' src={`${providerName}` === "google" ? google : github } alt="github" />
+                 </div>
+              </a>
               // <li key={providerName}>
-              //  {/* <LoginButton providerName={providerName}/> */}
-              //  {/* <Link to={`/connect/${providerName}`}></Link> */}
-              //  {/* <button className='sub-handle' onClick={()=>{submitHandler({email, password})}}>Submit</button> */}
+              //   <Link to={`/connect/${providerName}`}>
+              //   <button providerName={providerName}>{providerName} </button>
+                  
+              // </Link>
+              //  {/* {/* <button className='sub-handle' onClick={()=>{submitHandler({email, password})}}>Submit</button> */}
               //  </li>
             )}
           </div>
-          <div className='placehold'>
+          <div className='placehold'>     
             <input placeholder="Email" type="email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
           </div>
-          <div className='placehold'>
+          <div className='placehold'>                  
             <input placeholder="password" type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} />
           </div>
           <div className='placehold'>
+            
             <button className='sub-handle' onClick={() => { submitHandler({ email, password }) }}>Submit</button>
           </div>
           <Link to="/register" style={{ "textDecoration": "none" }}> <span className='link-handle'>New User? Register here</span> </Link>

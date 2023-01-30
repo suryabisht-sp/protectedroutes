@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "emailresets",
+  "info": {
+    "singularName": "emailreset",
+    "pluralName": "emailresets",
+    "displayName": "emailreset"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    }
+  }
+}

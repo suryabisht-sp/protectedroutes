@@ -16,16 +16,21 @@ const ForgetPass = () => {
   const submitHandler = (props) => {
     const data = new FormData();
     data.append("email", props.email)
-
+    console.log("email", email);
+    console.log("props", props)
+   
     const fetchData = () => {
-      return axios.post("http://localhost:1337/api/auth/forgot-password", data)
+       console.log("inside axios")
+      return axios.post("http://localhost:1337/api/auth/forgot-password", {
+     email: `${props.email}`// user's email
+  })
         .then((response) => { console.log("rtesponse", response) });
     }
     fetchData();
     // HeaderAuth()
-    setTimeout(() => {
-      navigate("/login");
-    }, 2000);
+    // setTimeout(() => {
+    //   navigate("/login");
+    // }, 2000);
   }
 
   const data = getToken();

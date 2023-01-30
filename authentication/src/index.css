@@ -65,14 +65,20 @@ code {
 
 .gitlogo{
   display: flex;
-  align-items: center;
-  gap: 15%;
-  width: 150px;
+  width: 190px;
+  margin: 2px;
+  background: rgb(187, 221, 239);
+  border-radius: 4px;
 }
 
 .spanLogo{
-  width: 1500px;
-  font-size:small
+  width: 25px;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  /* background: black; */
+  /* font-size:small */
 }
 
 /* .gitlogo img{
@@ -88,7 +94,6 @@ code {
 }
 
 .login-handler {
-  padding: 15px;
   margin-Top: 10px;
   display: flex;
   flex-direction: column;
@@ -101,6 +106,11 @@ code {
 
 .placehold{
   padding: 10px;
+}
+
+.placehold1{
+  padding-bottom: 10px;
+  padding-top: -15px;
 }
 
 .placehold input{
@@ -134,4 +144,10 @@ code {
 color: blue;
 padding: 5px;
 margin: auto 25px;
+}
+
+
+.profileUser{
+  display: flex;
+    justify-content: space-around;
 }
