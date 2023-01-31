@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Route, RouterProvider, Routes, createBrowserRouter } from "react-router-dom"
 import Homepage from './pages/Homepage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -12,6 +12,8 @@ import Profile from './pages/profile/profile';
 import ConnectPage from "./pages/connectPage";
 import ForgetPass from "./pages/forgetPassword";
 import ResetPassword from "./pages/resetPassword";
+import HomepageRq from "./pages/RQfetch";
+import DetailFetchPage from "./detailFetchData";
 
 // function App() {
 //   return (
@@ -36,8 +38,11 @@ function App() {
         <Route>
             <Route path='/' element={<Homepage />}>
             <Route path='/home' element={<Homepage />}></Route>
+
           </Route>
         </Route>}
+      <Route path='/homerq' element={<HomepageRq />}></Route>
+      <Route path='/homerq/detailfetch/:id' element={<DetailFetchPage />}></Route>
       <Route path='*' element={<NotFoundPage />}></Route>
        <Route path='/login' element={<Login />}></Route>
        <Route path='/forgetpassword' element={<ForgetPass />}></Route>

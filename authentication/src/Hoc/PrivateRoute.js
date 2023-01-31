@@ -9,7 +9,7 @@ const PrivateRoute = ({children}) => {
       return (<Navigate to = '/home'/>)
     }
     else {
-    (<Navigate to = '/'/>)
+    // (<Navigate to = '/'/>)
     }
      return (
        children
